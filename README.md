@@ -24,6 +24,6 @@ $ docker build -t dinojs/server .
 **Run the image**
 
 ```sh
-$ docker run -d -p 3000:3000 dinojs/server
+$ docker run -d -p 4000:4000 dinojs/server
 ```
 

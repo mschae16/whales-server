@@ -21,6 +21,11 @@ server.get('/facts/dino', (req, res) => {
      .send(getFact(dino.DinoData));
 });
 
+server.get('*', (req, res) => {
+  res.status(404)
+     .send('<h1>404: Not Found</h1>');
+});
+
 server.listen(PORT, () => {
   console.log('Server running on port ' + PORT + '.');
 });
