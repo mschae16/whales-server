@@ -3,6 +3,8 @@
 
 This is a small server which provides dinosaur facts.
 
+### Up and running
+
 **Install dependencies**
 
 ```sh
@@ -27,3 +29,20 @@ $ docker build -t dinojs/server .
 $ docker run -d -p 4000:4000 dinojs/server
 ```
 
+### Usage
+
+**/hello**
+
+Health check.
+
+```sh
+$ curl localhost:4000/hello
+```
+
+**/facts/dino**
+
+Returns a dinosaur fact.
+
+```sh
+$ curl localhost:4000/facts/dino
+```
