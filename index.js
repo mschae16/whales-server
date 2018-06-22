@@ -32,7 +32,7 @@ server.get('/facts/dino', (req, res) => {
 
 server.get('*', (req, res) => {
   res.status(404)
-     .html('<h1>404: Not Found</h1>');
+     .send('<h1>404: Not Found</h1>');
 });
 
 server.listen(PORT, () => {
