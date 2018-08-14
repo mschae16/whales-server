@@ -1,6 +1,6 @@
+
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 
 const whale = require('./data/whale');
 const { getFact } = require('./utils/');
@@ -11,22 +11,14 @@ const server = express();
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
-corsOptions = {
-  origin: 'http://localhost:3000'
-}
-
-server.use(cors(corsOptions))
-
-//--------------------------------------------   Routes
-
-server.get('/hello', (req, res) => {
+server.get('/hello', (_, res) => {
   res.status(200)
      .send("Welcome to the Whale API!");
 });
 
 server.get('/facts/whale', (req, res) => {
   res.status(200)
-     .json({ body: getFact(whale.whaleData) });
+     .send(getFact(whale.whaleData));
 });
 
 server.get('*', (req, res) => {
