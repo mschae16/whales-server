@@ -1,7 +1,7 @@
-# Dino fact generator
+# Whale Fact Generator
 ## Dockerized Node server
 
-This is a small server which provides dinosaur facts.
+This is a small server which provides whale facts.
 
 ### Up and running
 
@@ -20,13 +20,13 @@ $ npm start
 **Build the docker image**
 
 ```sh
-$ docker build -t dinojs/server .
+$ docker build -t whales/server .
 ```
 
 **Run the image**
 
 ```sh
-$ docker run -d -p 4000:4000 dinojs/server
+$ docker run -d -p 4000:4000 whales/server
 ```
 
 ### Usage
@@ -39,10 +39,10 @@ Health check.
 $ curl localhost:4000/hello
 ```
 
-**/facts/dino**
+**/facts/whale**
 
-Returns a dinosaur fact.
+Returns a whale fact.
 
 ```sh
-$ curl localhost:4000/facts/dino
+$ curl localhost:4000/facts/whale
 ```

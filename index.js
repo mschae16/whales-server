@@ -1,9 +1,8 @@
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const dino = require('./data/dino');
+const whale = require('./data/whale');
 const { getFact } = require('./utils/');
 
 const PORT = process.env.PORT || 4000;
@@ -22,12 +21,12 @@ server.use(cors(corsOptions))
 
 server.get('/hello', (_, res) => {
   res.status(200)
-     .send("Welcome to the Dino API!");
+     .send("Welcome to the Whale API!");
 });
 
-server.get('/facts/dino', (req, res) => {
+server.get('/facts/whale', (req, res) => {
   res.status(200)
-     .json({ body: getFact(dino.DinoData) });
+     .json({ body: getFact(whale.whaleData) });
 });
 
 server.get('*', (req, res) => {
