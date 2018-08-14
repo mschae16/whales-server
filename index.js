@@ -19,7 +19,7 @@ server.use(cors(corsOptions))
 
 //--------------------------------------------   Routes
 
-server.get('/hello', (_, res) => {
+server.get('/hello', (req, res) => {
   res.status(200)
      .send("Welcome to the Whale API!");
 });
